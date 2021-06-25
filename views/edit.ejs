@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/new.css">
+</head>
+<body>
+    <h1>Edit schedule</h1>
+    <form action = "/calendars/<%=calendar.id%>?_method=PATCH" method = "POST">
+    
+        <fieldset>
+            <label for = "title">Teacher Name</label>
+            
+            <input type = "text" name="title" id = "title" placeholder = "Enter Teacher Name" value = "<%=calendar.title%>">
+          <br>
+          <br>
+            <label for="body">Date</label>
+            
+            <input  type = "text" id = "body" name ="body" value = "<%=calendar.body%>">
+            <br>
+            <br>
+            <button>Submit</button>
+
+
+        </fieldset>
+
+    
+    
+    
+    </form>
+</body>
+</html>

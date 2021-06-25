@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calender</title>
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+<body>
+ <h1><i class="fas fa-calendar-alt"></i> &nbsp;<u>CALENDAR</u></h1>
+
+  <form action = "/calendars" method = "POST">
+  
+<div id="container">
+      <header>
+        <h1>June 2021</h1>
+      </header>
+      
+      <ul class="weekdays">
+        <li>Mo</li>
+        <li>Tu</li>
+        <li>We</li>
+        <li>Th</li>
+        <li>Fr</li>
+        <li>Sa</li>
+        <li>Su</li>
+      </ul>
+
+      <ul class="days">
+          <%for(let i = 1; i<=30; i++){%>
+            <li><a href="/calendars/new"><%=i%></a></li>
+          <%}%>
+</ul>
+</div>
+<center>
+<br>
+<br>
+<a id ="button-box" href="/calendars/new">Add Schedule</a>
+<br>
+<br>
+<a id ="button-box" href="/calendars">All Schedule</a>
+
+</center>
+</div>
+</form>
+
+
+</body>
+</html>
